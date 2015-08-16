@@ -28,7 +28,7 @@ cd /project/path
 // npm install may take some time, once completed just run grunt and the service will be up and running.
 npm install
 grunt
-// website is now running under http://localhost:8080 (server.js file contains this port if you need to change this)
+// The console should tell you which port the server is running under (server.js file contains this port if you need to change this)
 ```
 
 Note: If you see the error: *Fatal error: listen EADDRINUSE* you may need to change the port inside server.js
