@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var path = require('path');
 
+app.set('port', process.env.PORT || 8080);
 app.use(express.static(__dirname + '/app'));
 
 // Setup our custom routing for angularjs
@@ -21,7 +22,6 @@ app.get('*', function(req, res){
   res.sendFile(path.join(__dirname + '/app/index.html'));
 });
 
-var server = app.listen(8080, function () {
-  var port = server.address().port;
-  console.log('Example app listening at http://localhost:%s', port);
+var server = app.listen(app.get('port'), function() {
+    console.log('Server running and listening on port %d', app.get('port'));
 });

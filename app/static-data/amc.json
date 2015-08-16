@@ -1,7 +1,7 @@
 {
     "amc": {
         "title": "AMC",
-        "subTitle" : "<p>This data is running through an ExpressJS server running on port 8080 which spits out data purely from json files, a single view & some custom routing.</p> <p>Being a single page application, it's extremely fast & customizable. It does however depend on a few different resources:</p>",
+        "subTitle" : "<p>This data is running through an ExpressJS server which spits out data purely from json files, a single view & some custom routing.</p> <p>Being a single page application, it's extremely fast & customizable. It does however depend on a few different resources:</p>",
         "dependencies" : [
         	{"name" : "ExpressJS"},
         	{"name" : "AngularJS"},

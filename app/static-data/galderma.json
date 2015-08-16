@@ -1,11 +1,6 @@
 {
-    "pfizer": {
-    	"subItem" : {
-    		"item" : {
-    			"title" : "Pfizer - Item - This is a sub section of this page."
-    		}
-    	},
-        "title": "Pfizer",
+    "galderma": {
+        "title": "Galderma",
         "subTitle" : "<p>This data is running through an ExpressJS server which spits out data purely from json files, a single view & some custom routing.</p> <p>Being a single page application, it's extremely fast & customizable. It does however depend on a few different resources:</p>",
         "dependencies" : [
         	{"name" : "ExpressJS"},
