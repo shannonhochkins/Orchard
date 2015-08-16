@@ -1,0 +1,9 @@
+<ul class="treeRoot">
+	<li ng-repeat="item in root" ng-click="methods.toggleRoot(item)" ng-init="methods.changeData(item);">
+		<i class="collapsed" data-ng-show="item.children.length && item.collapsed" data-ng-click="methods.toggle(item)"></i>
+		<i class="expanded" data-ng-show="item.children.length && !item.collapsed" data-ng-click="methods.toggle(item)"></i>
+		<i class="normal" data-ng-hide="item.children.length"></i>
+		<a href="/page/{{item.customHREF}}{{item.name | sanitize}}" ng-click="methods.select(item);">{{ item.name }}</a>
+        <tree root="item.children" ng-hide="item.collapsed" selected="selected" not-root="true" parent="{{item.name | sanitize}}"></tree>
+	</li>
+</ul>

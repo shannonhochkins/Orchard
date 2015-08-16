@@ -1,0 +1,60 @@
+<!DOCTYPE html >
+<!--[if IEMobile 7 ]> <html data-ng-app="app" dir="ltr" lang="en-US"class="no-js iem7"> <![endif]-->
+<!--[if lt IE 7 ]> <html data-ng-app="app" dir="ltr" lang="en-US" class="no-js ie ie6 oldie"> <![endif]-->
+<!--[if IE 7 ]>    <html data-ng-app="app" dir="ltr" lang="en-US" class="no-js ie ie7 oldie"> <![endif]-->
+<!--[if IE 8 ]>    <html data-ng-app="app" dir="ltr" lang="en-US" class="no-js ie ie8 oldie"> <![endif]-->
+<!--[if IE 9 ]>    <html data-ng-app="app" dir="ltr" lang="en-US" class="no-js ie ie9 oldie"> <![endif]-->
+<!--[if (gte IE 10)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html data-ng-app="app" dir="ltr" lang="en-US" class="no-js"><!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Orchard - Website Example</title>
+        <meta name="description" content="{meta_description}">
+        <meta name="keywords" content="{meta_keywords}">
+        <meta name="author" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <base href="/">
+        <!-- CSS -->
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="css/min/main.min.css">
+        <!-- JS -->
+        <script type="text/javascript" src="js/lib/plugins/modernizr-2.6.2.min.js"></script>
+        <script type="text/javascript" src="js/lib/jquery/jquery-1.9.1.js"></script> 
+        <script type="text/javascript" src="js/lib/plugins/angular/angular.min.js"></script>
+        <script type="text/javascript" src="js/lib/plugins/angular/includes/angular-route.min.js"></script>
+        <script type="text/javascript" src="js/lib/plugins/angular/includes/ng-loading-bar.min.js"></script>
+        <!-- Grunt will automatically compile these file -->
+        <script type="text/javascript" src="js/dest/main.min.js"></script> 
+    </head>
+    <body class="" data-ng-controller="mainController">
+        <header>
+            <div id="topRow">
+                <a href="/"><img src="/_design/header/logo.png" width="190" height="60" /></a>
+            </div>
+            <nav id="top" class="clearFix">
+                <breadcrumbs root="rootMenu" selected="selected" class="floatLeft"></breadcrumbs>
+                <ul class="floatRight">
+                    <li ng-repeat="item in systemMenu">
+                        <a href="{{item.href}}">{{item.name}}</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div id="sidebar">
+            <div class="inner">
+                <div class="treeWrapper">
+                    <tree root="menuItems" selected="selected"></tree>
+                </div>
+            </div>
+        </div>
+        <section id="mainContent">
+            <div class="inner">
+                <div ng-view></div>
+            </div>
+        </section>
+        <footer>
+            <p>&copy; Copyright Orchard Marketing<p>
+        </footer>
+    </body>
+</html>

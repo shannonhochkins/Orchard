@@ -1,0 +1,5 @@
+<ul class="breadcrumbs">
+    <li ng-repeat="item in root">
+        <a ng-href="/page/{{item.customHREF}}{{item.name | sanitize}}" ng-class="{selected : item.selected}">{{item.name}}</a>
+    </li>
+</ul>
