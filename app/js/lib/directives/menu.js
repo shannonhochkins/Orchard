@@ -12,7 +12,6 @@ app.directive("tree", ['RecursionHelper', 'menu', function(RecursionHelper, menu
                 scope.methods = {
                     toggleRoot : function(item) {
                         if (attrs.notRoot) return;
-                        console.log('root', item);
                         menu.update({rootMenu : item});
                     },
                     toggle : function(item) {

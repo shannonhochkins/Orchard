@@ -31,6 +31,8 @@ grunt
 // website is now running under http://localhost:8080 (server.js file contains this port if you need to change this)
 ```
 
+Note: If you see the error: *Fatal error: listen EADDRINUSE* you may need to change the port inside server.js
+
 That's it! Once grunt is running it will automatically perform the following:
 
 - Server will restart when it detects changes to files.

@@ -25,7 +25,6 @@ app.factory('menu', ['$rootScope', '$filter', function ($rootScope, $filter) {
       result = [];
       if (angular.isDefined(options)) recursiveLoop(options.rootMenu);
       options.rootMenu = result;
-      console.log('options', result);
       if (angular.isDefined(allowBroadcast) && allowBroadcast == false) return;
       if (angular.isUndefined(options)) return;
       broadcast(options);
