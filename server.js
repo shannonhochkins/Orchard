@@ -21,7 +21,7 @@ app.get('*', function(req, res){
   res.sendFile(path.join(__dirname + '/app/index.html'));
 });
 
-var server = app.listen(9090, function () {
+var server = app.listen(8080, function () {
   var port = server.address().port;
   console.log('Example app listening at http://localhost:%s', port);
 });
